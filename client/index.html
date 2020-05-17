@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Coronavirus Tracker pro Kopf" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coronavirus Tracker</title>
+
+    <style>
+      :root {
+        --color: #454545;
+        --background-color: #f2f2f2;
+      }
+
+      /*@media (prefers-color-scheme: dark) {
+        :root {
+          --color: #f2f2f2;
+          --background-color: #454545;
+        }
+      }*/
+
+      body {
+        max-width: 650px;
+        margin: 40px auto;
+        padding: 0 10px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-size: 18px;
+        line-height: 1.6;
+        color: var(--color);
+        background-color: var(--background-color);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        line-height: 1.2;
+      }
+    </style>
+    <link rel="stylesheet" href="./css/site.css" />
+  </head>
+
+  <body>
+    <!--[if lt IE 8]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="http://browsehappy.com/">upgrade your browser</a> to improve
+        your experience.
+      </p>
+    <![endif]-->
+    <h1>Coronavirus Tracker</h1>
+    <p>
+      Dieser Coronavirus Tracker versucht, mehr Aussagekraft in die Fallzahlen
+      zu bringen. Die Gesamtanzahl der bestätigten Corona-Fälle pro Land sind
+      nämlich relativ unaussagekräftiger.
+    </p>
+    <p>
+      Deutlich aussagekräftiger sind die
+      <strong>Fallzahlen pro Einwohner</strong>. So lassen sich unterschiedliche
+      Länder deutlich besser vergleichen. Noch besser wären die
+      <strong>Fallzahlen pro Einwohner pro Test</strong>. Allerdings gibt es nur
+      sehr unregelmäßig Daten zu der Anzahl der durchgeführten Tests, weswegen
+      das Ergebnis dieser Auswertung verfälscht wäre.
+    </p>
+    <div>
+      DATA WILL APPEAR HERE
+    </div>
+
+    <script src="./js/site.js"></script>
+  </body>
+</html>
