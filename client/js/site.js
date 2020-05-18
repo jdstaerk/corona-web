@@ -1,5 +1,5 @@
 let perHowMany = 100000;
-console.log("alkjaösdfjks");
+
 fetch("https://api.covid19api.com/summary")
   .then((result) => result.json())
   .then((data) => {
@@ -7,7 +7,6 @@ fetch("https://api.covid19api.com/summary")
       return country.population > 5000000;
     });
 
-    let mostCasesPerCapita = []
     let casesPerCapitaList = []
 
     countriesOfInterest.forEach((country) => {
@@ -22,15 +21,13 @@ fetch("https://api.covid19api.com/summary")
 
     let htmlContent = ''
 
+    let place = 1
     for (i = 0; i < 10; i++) {
       let topCountry = casesPerCapitaList[casesPerCapitaList.length - i]
       if (!topCountry) continue;
-      htmlContent += '<p><strong>' + topCountry.name + '</strong> hat <strong>' + topCountry.casesPerCapita.toFixed(2) + '</strong> bestätigte Corona Fälle pro ' + perHowMany + ' Einwohner.</p>'
+      htmlContent += '<p><strong>#' + place + ' - ' + topCountry.name + '</strong> hat <strong>' + topCountry.casesPerCapita.toFixed(2) + '</strong> bestätigte Corona Fälle pro ' + perHowMany + ' Einwohner.</p>'
+      place++
     }
-
-    console.log(mostCasesPerCapita)
-
-
 
     document.getElementById('div-data').innerHTML = htmlContent
     
