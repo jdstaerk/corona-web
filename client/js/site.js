@@ -25,7 +25,7 @@ fetch("https://api.covid19api.com/summary")
     for (i = 0; i < 10; i++) {
       let topCountry = casesPerCapitaList[casesPerCapitaList.length - i]
       if (!topCountry) continue;
-      htmlContent += '<p><strong>#' + place + ' - ' + topCountry.name + '</strong> hat <strong>' + topCountry.casesPerCapita.toFixed(2) + '</strong> bestätigte Corona Fälle pro ' + perHowMany + ' Einwohner.</p>'
+      htmlContent += '<p><strong>#' + place + ' - ' + topCountry.name + '</strong> hat <strong>' + topCountry.casesPerCapita.toFixed(2) + '</strong> bestätigte Corona Fälle.</p>'
       place++
     }
 
